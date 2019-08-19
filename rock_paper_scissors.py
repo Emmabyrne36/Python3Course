@@ -5,18 +5,22 @@ print("...rock...\n...paper...\n...scissors...\n")
 print("Enter Player 1's choice: ")
 p1 = str(input())
 
-computer_num = random.randint(0, 2)
-num_to_choice = {
-    0: "rock",
-    1: "paper",
-    2: "scissors"
-}
+p2 = random.choice(["rock", "paper", "scissors"])
+
+# Alternative way to get computer guess
+#computer_num = random.randint(0, 2)
+#num_to_choice = {
+#    0: "rock",
+#    1: "paper",
+#    2: "scissors"
+#}
 
 # Maps the random int generated to rock, paper or scissors
-p2 = num_to_choice[computer_num]
+#p2 = num_to_choice[computer_num]
 
 
 message = None
+print(f"Computer picks {p2}")
 
 if p1 == p2:
     message = "DRAW"
