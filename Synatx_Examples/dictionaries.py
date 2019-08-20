@@ -15,8 +15,9 @@ print(donations.get('sam'))  # 25.0
 # pop(key) - pops given key from dictionary
 # popitem() - removes random entry from dictionary
 
-
+# ============================================
 # Data modelling using Dictionaries and Lists
+# ============================================
 playlist = {
     'name': 'Playlist Name',
     'author': 'Author',
@@ -37,3 +38,24 @@ total_time = 0
 for song in playlist['songs']:
     total_time += song['duration']
 print(total_time)
+
+
+# =========================
+# Dictionary Comprehension
+# =========================
+# Syntax { __: __ for __ in __ }
+# Iterates over keys by default
+numbers = dict(first=1, second=2, third=3)
+squared_nums = {key: value ** 2 for key, value in numbers.items()}
+print(squared_nums)
+
+# ====================================
+# Conditional Logic with Dictionaries
+# ====================================
+num_list = [1, 2, 3, 4]
+even_odd = {num: ("even" if num % 2 == 0 else "odd") for num in num_list}
+print(even_odd)
+
+# Map ASCII number to char for capital letters
+# {65: 'A, 66: 'B'} etc.
+map_ASCII = {char: chr(char) for char in range(65, 91)}
